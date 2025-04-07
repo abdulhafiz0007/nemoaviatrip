@@ -1,0 +1,18 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes slideUp {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.footer-animation {
+    animation: slideUp 1s ease-out forwards;
+}
