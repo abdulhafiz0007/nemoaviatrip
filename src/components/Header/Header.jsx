@@ -262,7 +262,7 @@ export const Header = () => {
             <div
                className={` ${
                   langClick
-                     ? "fixed top-[50px] right-[200px] bg-white rounded-lg"
+                     ? `fixed top-[50px] lg:right-[200px] right-[100px] bg-white rounded-lg`
                      : "hidden "
                } `}
             >
