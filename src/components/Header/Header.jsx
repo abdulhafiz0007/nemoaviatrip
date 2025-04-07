@@ -262,11 +262,11 @@ export const Header = () => {
             <div
                className={` ${
                   langClick
-                     ? `fixed top-[50px] lg:right-[200px] right-[100px] bg-white rounded-lg`
+                     ? `fixed lg:top-[50px] top-[40px] lg:right-[200px] right-[100px] bg-white rounded-lg`
                      : "hidden "
                } `}
             >
-               <ul className="flex flex-col items-start gap-4 z">
+               <ul className="flex flex-col items-start gap-2 z">
                   <li
                      onClick={() => {
                         setLangActive("EN");
