@@ -37,6 +37,20 @@ export const Partners = () => {
             navigation={false}
             freemode="true"
             freemodemomentum="false"
+            breakpoints={{
+                320: {
+                    slidesPerView: 2, 
+                },
+                640: {
+                    slidesPerView: 3, 
+                },
+                768: {
+                    slidesPerView: 4, 
+                },
+                1024: {
+                    slidesPerView: 6, 
+                },
+            }}
          >
             <SwiperSlide>
                 <div className="flex flex-col items-center">
