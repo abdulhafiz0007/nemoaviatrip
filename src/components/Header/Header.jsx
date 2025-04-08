@@ -10,7 +10,7 @@ import { LangContext } from "../../context/LangContext";
 import { useEffect } from "react";
 import SiteLogo2 from "../../assets/images/logo2.png";
 import MenuImg from "../../assets/images/menu-img.png";
-import { BottomArrow, TopArrow } from "../../assets/images/Icons";
+import { BottomArrow, TopArrow, MenuIcon, CloseIcon } from "../../assets/images/Icons";
 
 export const Header = () => {
    const [langActive, setLangActive] = useState("EN");
@@ -19,6 +19,8 @@ export const Header = () => {
    const [activeLink, setActiveLink] = useState("#home");
    const [menuActive, setMenuActive] = useState(false);
    const [arrowActive, setArrowActive] = useState(false);
+   const [closeActive, setCloseActive] = useState(false);
+
 
    const { til, setTil } = useContext(LangContext);
 
@@ -153,11 +155,16 @@ export const Header = () => {
             </nav>
             {langActive === "EN" && (
                <div
-                  onClick={() => {setLangClick(!langClick); setArrowActive(!arrowActive)}}
+                  onClick={() => {
+                     setLangClick(!langClick);
+                     setArrowActive(!arrowActive);
+                  }}
                   className="flex items-cener cursor-pointer"
                >
                   <p
-                     className={`${headerFixed ? "text-black" : "text-white"} mr-2`}
+                     className={`${
+                        headerFixed ? "text-black" : "text-white"
+                     } mr-2`}
                   >
                      EN
                   </p>
@@ -165,14 +172,23 @@ export const Header = () => {
                      onClick={() => setArrowActive(!arrowActive)}
                      className={`${headerFixed ? "text-black" : "text-white"}`}
                   >
-                     <BottomArrow arrowActive={arrowActive} headerFixed={headerFixed} />
-                     <TopArrow arrowActive={arrowActive} headerFixed={headerFixed}/>
+                     <BottomArrow
+                        arrowActive={arrowActive}
+                        headerFixed={headerFixed}
+                     />
+                     <TopArrow
+                        arrowActive={arrowActive}
+                        headerFixed={headerFixed}
+                     />
                   </button>
                </div>
             )}
             {langActive === "UZ" && (
                <div
-                  onClick={() => {setLangClick(!langClick); setArrowActive(!arrowActive)}}
+                  onClick={() => {
+                     setLangClick(!langClick);
+                     setArrowActive(!arrowActive);
+                  }}
                   className={` ${
                      langActive === "UZ"
                         ? "block flex items-cener cursor-pointer"
@@ -180,7 +196,9 @@ export const Header = () => {
                   }`}
                >
                   <p
-                     className={`${headerFixed ? "text-black" : "text-white"} mr-2`}
+                     className={`${
+                        headerFixed ? "text-black" : "text-white"
+                     } mr-2`}
                   >
                      UZ
                   </p>
@@ -188,14 +206,23 @@ export const Header = () => {
                      onClick={() => setArrowActive(!arrowActive)}
                      className={`${headerFixed ? "text-black" : "text-white"}`}
                   >
-                     <BottomArrow arrowActive={arrowActive} headerFixed={headerFixed} />
-                     <TopArrow arrowActive={arrowActive} headerFixed={headerFixed}/>
+                     <BottomArrow
+                        arrowActive={arrowActive}
+                        headerFixed={headerFixed}
+                     />
+                     <TopArrow
+                        arrowActive={arrowActive}
+                        headerFixed={headerFixed}
+                     />
                   </button>
                </div>
             )}
             {langActive === "RU" && (
                <div
-                  onClick={() => {setLangClick(!langClick); setArrowActive(!arrowActive)}}
+                  onClick={() => {
+                     setLangClick(!langClick);
+                     setArrowActive(!arrowActive);
+                  }}
                   className={` ${
                      langActive === "RU"
                         ? "block flex items-cener cursor-pointer"
@@ -203,7 +230,9 @@ export const Header = () => {
                   }`}
                >
                   <p
-                     className={`${headerFixed ? "text-black" : "text-white"} mr-2`}
+                     className={`${
+                        headerFixed ? "text-black" : "text-white"
+                     } mr-2`}
                   >
                      RU
                   </p>
@@ -211,54 +240,98 @@ export const Header = () => {
                      onClick={() => setArrowActive(!arrowActive)}
                      className={`${headerFixed ? "text-black" : "text-white"}`}
                   >
-                     <BottomArrow arrowActive={arrowActive} headerFixed={headerFixed} />
-                     <TopArrow arrowActive={arrowActive} headerFixed={headerFixed}/>
+                     <BottomArrow
+                        arrowActive={arrowActive}
+                        headerFixed={headerFixed}
+                     />
+                     <TopArrow
+                        arrowActive={arrowActive}
+                        headerFixed={headerFixed}
+                     />
                   </button>
                </div>
             )}
-            <div onClick={() => setMenuActive(!menuActive)} className={` lg:hidden`}>
-               <img className="w-[24px] h-[24px]" src={MenuImg} alt="" />
+            <div
+               onClick={() => setMenuActive(!menuActive)}
+               className={` lg:hidden`}
+            >
+               <div onClick={() => setCloseActive(!closeActive)}>
+                  <MenuIcon closeActive={closeActive} headerFixed={headerFixed} />
+               </div>
+               <div onClick={() => setCloseActive(!closeActive)}>
+                  <CloseIcon closeActive={closeActive} headerFixed={headerFixed} />
+               </div>
             </div>
-            <nav className={` ${menuActive ? "fixed top-[60px] bg-white w-full" : "hidden"}`}>
-               <ul className="flex flex-col items-start gap-[25px] pl-[15px] pt-[10px] pb-[20px]">
-                  <li
-                     onClick={() => setActiveLink("#home")}
-                     className={` ${ activeLink === "#home" ? "text-[#F26522] font-bold" : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"} `}
-                  >
-                     <a href="#home">{lang[til].header.home}</a>
-                  </li>
-                  <li
-                     onClick={() => setActiveLink("#about")}
-                     className={` ${ activeLink === "#about" ? "text-[#F26522] font-bold" : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"} `}
-                  >
-                     <a href="#about">{lang[til].header.about}</a>
-                  </li>
-                  <li
-                     onClick={() => setActiveLink("#tours")}
-                     className={` ${ activeLink === "#tours" ? "text-[#F26522] font-bold" : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"} `}
-                  >
-                     <a href="#tours">{lang[til].header.tours}</a>
-                  </li>
-                  <li
-                     onClick={() => setActiveLink("#hotels")}
-                     className={` ${ activeLink === "#hotels" ? "text-[#F26522] font-bold" : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"} `}
-                  >
-                     <a href="#hotels">{lang[til].header.hotels}</a>
-                  </li>
-                  <li
-                     onClick={() => setActiveLink("#flights")}
-                     className={` ${ activeLink === "#flights" ? "text-[#F26522] font-bold" : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"} `}
-                  >
-                     <a href="#flights">{lang[til].header.flights}</a>
-                  </li>
-                  <li
-                     onClick={() => setActiveLink("#contact")}
-                     className={` ${ activeLink === "#contact" ? "text-[#F26522] font-bold" : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"} `}
-                  >
-                     <a href="#contact">{lang[til].header.contact}</a>
-                  </li>
-               </ul>
-            </nav>
+            <div
+               className={` ${
+                  menuActive ? "fixed top-[60px] bg-[#F26522] w-full" : "hidden"
+               }`}
+            >
+               <nav className="mr-[40px] bg-white">
+                  <ul className="flex flex-col items-start gap-[25px] pl-[15px] pt-[10px] pb-[20px]">
+                     <li
+                        onClick={() => setActiveLink("#home")}
+                        className={` ${
+                           activeLink === "#home"
+                              ? "text-[#F26522] font-bold"
+                              : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"
+                        } `}
+                     >
+                        <a href="#home">{lang[til].header.home}</a>
+                     </li>
+                     <li
+                        onClick={() => setActiveLink("#about")}
+                        className={` ${
+                           activeLink === "#about"
+                              ? "text-[#F26522] font-bold"
+                              : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"
+                        } `}
+                     >
+                        <a href="#about">{lang[til].header.about}</a>
+                     </li>
+                     <li
+                        onClick={() => setActiveLink("#tours")}
+                        className={` ${
+                           activeLink === "#tours"
+                              ? "text-[#F26522] font-bold"
+                              : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"
+                        } `}
+                     >
+                        <a href="#tours">{lang[til].header.tours}</a>
+                     </li>
+                     <li
+                        onClick={() => setActiveLink("#hotels")}
+                        className={` ${
+                           activeLink === "#hotels"
+                              ? "text-[#F26522] font-bold"
+                              : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"
+                        } `}
+                     >
+                        <a href="#hotels">{lang[til].header.hotels}</a>
+                     </li>
+                     <li
+                        onClick={() => setActiveLink("#flights")}
+                        className={` ${
+                           activeLink === "#flights"
+                              ? "text-[#F26522] font-bold"
+                              : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"
+                        } `}
+                     >
+                        <a href="#flights">{lang[til].header.flights}</a>
+                     </li>
+                     <li
+                        onClick={() => setActiveLink("#contact")}
+                        className={` ${
+                           activeLink === "#contact"
+                              ? "text-[#F26522] font-bold"
+                              : "text-black font-medium text-[14px] font-bold hover:text-[#F26522]"
+                        } `}
+                     >
+                        <a href="#contact">{lang[til].header.contact}</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
             <div
                className={` ${
                   langClick

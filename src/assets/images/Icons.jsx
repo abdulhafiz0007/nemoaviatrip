@@ -104,10 +104,12 @@ export const InstagramIcon = () => {
    );
 };
 
-export const BottomArrow = ({ headerFixed, arrowActive}) => {
+export const BottomArrow = ({ headerFixed, arrowActive }) => {
    return (
       <svg
-         className={` ${headerFixed ? "text-black" : "text-white"} pt-[1px] ${arrowActive ? "hidden" : "block"} `}
+         className={` ${headerFixed ? "text-black" : "text-white"} pt-[1px] ${
+            arrowActive ? "hidden" : "block"
+         } `}
          xmlns="http://www.w3.org/2000/svg"
          xmlnsXlink="http://www.w3.org/1999/xlink"
          version="1.1"
@@ -154,7 +156,9 @@ export const BottomArrow = ({ headerFixed, arrowActive}) => {
 export const TopArrow = ({ headerFixed, arrowActive }) => {
    return (
       <svg
-         className={`${headerFixed ? "text-black" : "text-white"} ${arrowActive ? "block" : "hidden" }`}
+         className={`${headerFixed ? "text-black" : "text-white"} ${
+            arrowActive ? "block" : "hidden"
+         }`}
          fill="currentColor"
          height="25px"
          width="10px"
@@ -170,6 +174,45 @@ export const TopArrow = ({ headerFixed, arrowActive }) => {
             d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
 	l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
 	C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"
+         />
+      </svg>
+   );
+};
+
+export const MenuIcon = ({ headerFixed, closeActive }) => {
+   return (
+      <svg
+         className={` ${headerFixed ? "text-black" : "text-white"} ${closeActive ? "hidden" : "block"} `}
+         width="24px"
+         height="24px"
+         viewBox="0 0 20 20"
+         xmlns="http://www.w3.org/2000/svg"
+         fill="currentColor"
+      >
+         <path
+            fill="currentColor"
+            fillRule="evenodd"
+            d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"
+         />
+      </svg>
+   );
+};
+
+export const CloseIcon = ({ headerFixed, closeActive }) => {
+   return (
+      <svg
+         className={` ${headerFixed ? "text-black" : "text-white"} ${closeActive ? "block" : "hidden"}`}
+         width="24px"
+         height="24px"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+      >
+         <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+            fill="currentColor"
          />
       </svg>
    );

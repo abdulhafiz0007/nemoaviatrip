@@ -47,7 +47,7 @@ export const Contact = () => {
                 </textarea>
                 <button className="text-white bg-[#2C2C2C] py-[8px] rounded-lg mt-[30px]">{lang[til].contacts.submit}</button>
             </form>
-            <div className="flex flex-col gap-[30px] lg:w-[624px]">
+            <div className="flex flex-col gap-[30px] lg:w-[624px] w-full">
                 <div className="w-full lg:h-[236px] flex flex-col gap-[16px] bg-white p-[24px] shadow-xl rounded-xl">
                     <h3 className="text-[22px] text-[#2C2C2C] font-medium">{lang[til].contacts.contactInfo}</h3>
                     <p className="font-medium">{lang[til].contacts.address}</p>
