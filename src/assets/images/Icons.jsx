@@ -182,7 +182,9 @@ export const TopArrow = ({ headerFixed, arrowActive }) => {
 export const MenuIcon = ({ headerFixed, closeActive }) => {
    return (
       <svg
-         className={` ${headerFixed ? "text-black" : "text-white"} ${closeActive ? "hidden" : "block"} `}
+         className={` ${headerFixed ? "text-black" : "text-white"} ${
+            closeActive ? "hidden" : "block"
+         } `}
          width="24px"
          height="24px"
          viewBox="0 0 20 20"
@@ -201,7 +203,9 @@ export const MenuIcon = ({ headerFixed, closeActive }) => {
 export const CloseIcon = ({ headerFixed, closeActive }) => {
    return (
       <svg
-         className={` ${headerFixed ? "text-black" : "text-white"} ${closeActive ? "block" : "hidden"}`}
+         className={` ${headerFixed ? "text-black" : "text-white"} ${
+            closeActive ? "block" : "hidden"
+         }`}
          width="24px"
          height="24px"
          viewBox="0 0 24 24"
@@ -214,6 +218,94 @@ export const CloseIcon = ({ headerFixed, closeActive }) => {
             d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
             fill="currentColor"
          />
+      </svg>
+   );
+};
+
+export const ContactIcon = () => {
+   return (
+      <svg
+         className="text-[#F26522] w-10 h-10"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 171 171"
+      >
+         <title>Asset 19</title>
+         <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+               <circle cx="85.5" cy="85.5" r="85.5" fill="currentColor" />
+               <path
+                  d="M102.8,61.1A18.15,18.15,0,1,1,84.6,43,18.12,18.12,0,0,1,102.8,61.1Z"
+                  fill="#fff"
+               />
+               <path
+                  d="M84.7,85.5A33.72,33.72,0,0,0,51,119.2a8.81,8.81,0,0,0,8.8,8.8h49.7a8.81,8.81,0,0,0,8.8-8.8A33.63,33.63,0,0,0,84.7,85.5Z"
+                  fill="#fff"
+               />
+            </g>
+         </g>
+      </svg>
+   );
+};
+
+export const TimeIcon = () => {
+   return (
+      <svg
+         className="w-10 h-10 bg-[#F26522]"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlnsXlink="http://www.w3.org/1999/xlink"
+         version="1.1"
+         viewBox="0 0 256 256"
+         xmlSpace="preserve"
+      >
+         <g
+            style={{
+               stroke: "none",
+               strokeWidth: 0,
+               strokeDasharray: "none",
+               strokeLinecap: "butt",
+               strokeLinejoin: "miter",
+               strokeMiterlimit: 10,
+               fill: "currentcolor",
+               fillRule: "nonzero",
+               opacity: 1,
+            }}
+            transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+         >
+            <path
+               className="text-white"
+               d="M 60.269 30.771 L 47.201 41.304 c -0.624 -0.367 -1.341 -0.593 -2.116 -0.593 c -2.318 0 -4.204 1.886 -4.204 4.204 c 0 1.794 1.135 3.318 2.721 3.921 v 23.038 c 0 0.819 0.664 1.484 1.484 1.484 s 1.483 -0.664 1.483 -1.484 V 48.836 c 1.585 -0.602 2.721 -2.126 2.721 -3.921 c 0 -0.457 -0.092 -0.889 -0.227 -1.301 l 13.07 -10.534 c 0.637 -0.514 0.738 -1.448 0.224 -2.086 C 61.84 30.357 60.907 30.256 60.269 30.771 z"
+               style={{
+                  stroke: "none",
+                  strokeWidth: 1,
+                  strokeDasharray: "none",
+                  strokeLinecap: "butt",
+                  strokeLinejoin: "miter",
+                  strokeMiterlimit: 10,
+                  fill: "currenColor",
+                  fillRule: "nonzero",
+                  opacity: 1,
+               }}
+               transform=" matrix(1 0 0 1 0 0) "
+               strokeLinecap="round"
+            />
+            <path
+               className="text-white"
+               d="M 45.084 -0.085 c -24.813 0 -45 20.187 -45 45 c 0 24.814 20.187 45.001 45 45.001 c 24.813 0 45 -20.187 45 -45.001 C 90.084 20.102 69.897 -0.085 45.084 -0.085 z M 45.084 86.949 c -23.177 0 -42.033 -18.856 -42.033 -42.034 c 0 -23.177 18.856 -42.033 42.033 -42.033 c 23.177 0 42.033 18.856 42.033 42.033 C 87.117 68.093 68.261 86.949 45.084 86.949 z"
+               style={{
+                  stroke: "none",
+                  strokeWidth: 1,
+                  strokeDasharray: "none",
+                  strokeLinecap: "butt",
+                  strokeLinejoin: "miter",
+                  strokeMiterlimit: 10,
+                  fill: "currentColor",
+                  fillRule: "nonzero",
+                  opacity: 1,
+               }}
+               transform=" matrix(1 0 0 1 0 0) "
+               strokeLinecap="round"
+            />
+         </g>
       </svg>
    );
 };
