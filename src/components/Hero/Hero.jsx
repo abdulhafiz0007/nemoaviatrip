@@ -23,21 +23,21 @@ export const Hero = () => {
             </motion.p>
             <div className="flex flex-col lg:flex-row items-center gap-[24px] lg:gap-[40px] bg-white lg:px-[40px] px-[28px] py-[25px] lg:py-[25px] lg:rounded-[50px] rounded-[30px]">
                <ul className="flex flex-col lg:flex-row items-start lg:items-center gap-[22px] lg:gap-[30px]">
-                  <li className="flex items-center gap-3">
+                  <li className="flex items-center gap-3 lg:w-[165px]">
                      <ContactIcon />
                      <div>
                         <h3 className="text-[14px] text-[#1F2937]"> {lang[til].hero.clients}</h3>
                         <strong>45000+</strong>
                      </div>
                   </li>
-                  <li className="flex items-center gap-3">
+                  <li className="flex items-center gap-3 lg:w-[165px]">
                      <ContactIcon />
                      <div>
                         <h3 className="text-[14px] text-[#1F2937]"> {lang[til].hero.countries}</h3>
                         <strong>30+</strong>
                      </div>
                   </li>
-                  <li className="flex items-center gap-3">
+                  <li className="flex items-center gap-3 lg:w-[165px]">
                      <ContactIcon />
                      <div>
                         <h3 className="text-[14px] text-[#1F2937]"> {lang[til].hero.experience}</h3>
@@ -45,7 +45,7 @@ export const Hero = () => {
                      </div>
                   </li>
                </ul>
-               <a href="#contact" className="text-white text-center py-2 w-full bg-[#F26522] rounded-full lg:text-[20px] text-[16px]">
+               <a href="#contact" className="text-white text-center py-2 w-full bg-[#F26522] rounded-full lg:w-[160px] text-[16px]">
                   {lang[til].hero.learnMore}
                </a>
             </div>
