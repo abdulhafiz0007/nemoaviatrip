@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { useRef } from "react";
 import axios from "axios";
 
-
 export const Flights = () => {
    const { til } = useContext(LangContext);
    const [returnActive, setReturnActive] = useState(false);
@@ -52,6 +51,11 @@ export const Flights = () => {
          .then((res) => {
             if (res.status === 200) {
                toast.success("Message sent!");
+               fromRef.current.value = "";
+               toRef.current.value = "";
+               deparetureRef.current.value = "";
+               returnRef.current.value = "";
+               passengersRef.current.value = "";
             }
          })
          .catch((err) => toast.error("Failed to sent!"));
@@ -136,7 +140,9 @@ export const Flights = () => {
                   </li>
                   <li
                      className={` ${
-                        returnActive ? "flex flex-col w-full md:w-[280px]" : "hidden"
+                        returnActive
+                           ? "flex flex-col w-full md:w-[280px]"
+                           : "hidden"
                      } `}
                   >
                      <label
