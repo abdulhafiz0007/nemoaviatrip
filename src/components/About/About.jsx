@@ -55,7 +55,7 @@ export const About = () => {
                className="flex flex-col lg:w-[624px]"
                initial={{ x: -250, opacity: 0 }}
                whileInView={{ x: 0, opacity: 1 }}
-               transition={{ duration: 1.2, type: "tween" }}
+               transition={{ duration: 1, type: "tween" }}
                viewport={{ once: false, amount: 0.2 }}
             >
                <p className="text-[#4B5563] text-[17px] mb-[16px]">
@@ -70,7 +70,7 @@ export const About = () => {
                className="flex flex-col gap-[16px]"
                initial={{ x: 250, opacity: 0 }}
                whileInView={{ x: 0, opacity: 1 }}
-               transition={{ duration: 1.2, type: "tween" }}
+               transition={{ duration: 1, type: "tween" }}
                viewport={{ once: false, amount: 0.2 }}
             >
                <img
