@@ -92,7 +92,7 @@ export const Flights = () => {
                   </button>
                </div>
                <ul className="flex flex-col lg:flex-row lg:gap-2 gap-5 flex-wrap items-center justify-between">
-                  <li className="flex flex-col">
+                  <li className="flex flex-col w-full md:w-[280px]">
                      <label
                         className="mb-1 font-medium text-[#4B5563]"
                         htmlFor=""
@@ -101,12 +101,12 @@ export const Flights = () => {
                      </label>
                      <input
                         ref={fromRef}
-                        className="outline-none border-2 border-slate-300 rounded-lg px-[20px] py-[8px] w-[280px]"
+                        className="outline-none w-full border-2 border-slate-300 rounded-lg px-[20px] py-[8px] w-[280px]"
                         type="text"
                         placeholder=""
                      />
                   </li>
-                  <li className="flex flex-col">
+                  <li className="flex flex-col w-full md:w-[280px]">
                      <label
                         className="mb-1 font-medium text-[#4B5563]"
                         htmlFor=""
@@ -115,12 +115,12 @@ export const Flights = () => {
                      </label>
                      <input
                         ref={toRef}
-                        className=" outline-none border-2 border-slate-300 rounded-lg px-[20px] py-[8px] w-[280px]"
+                        className=" outline-none w-full border-2 border-slate-300 rounded-lg px-[20px] py-[8px] w-[280px]"
                         type="text"
                         placeholder=""
                      />
                   </li>
-                  <li className="flex flex-col">
+                  <li className="flex flex-col w-full md:w-[280px]">
                      <label
                         className="mb-1 font-medium text-[#4B5563]"
                         htmlFor=""
@@ -129,14 +129,14 @@ export const Flights = () => {
                      </label>
                      <input
                         ref={deparetureRef}
-                        className="outline-none border-2 border-slate-300 rounded-lg px-[20px] py-[8px] w-[280px]"
+                        className="outline-none w-full border-2 border-slate-300 rounded-lg px-[20px] py-[8px] w-[280px]"
                         type="date"
                         placeholder=""
                      />
                   </li>
                   <li
                      className={` ${
-                        returnActive ? "flex flex-col" : "hidden"
+                        returnActive ? "flex flex-col w-full md:w-[280px]" : "hidden"
                      } `}
                   >
                      <label
@@ -147,12 +147,12 @@ export const Flights = () => {
                      </label>
                      <input
                         ref={returnRef}
-                        className="outline-none border-2 border-slate-300 rounded-lg px-[20px] py-[8px] w-[280px]"
+                        className="outline-none w-full border-2 border-slate-300 rounded-lg px-[20px] py-[8px] w-[280px]"
                         type="date"
                         placeholder=""
                      />
                   </li>
-                  <li className="flex flex-col">
+                  <li className="flex flex-col w-full md:w-[280px]">
                      <label
                         className="mb-1 font-medium text-[#4B5563]"
                         htmlFor=""
@@ -161,7 +161,7 @@ export const Flights = () => {
                      </label>
                      <input
                         ref={passengersRef}
-                        className="outline-none border-2 border-slate-300 rounded-lg px-[20px] py-[8px] w-[280px]"
+                        className="outline-none w-full border-2 border-slate-300 rounded-lg px-[20px] py-[8px] w-[280px]"
                         type="number"
                         placeholder=""
                      />
